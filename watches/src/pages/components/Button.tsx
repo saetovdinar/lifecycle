@@ -1,12 +1,12 @@
 import styles from './button.module.css'
 
 
-export default function Button() {
+export default function Button({addHandler}: ()=>void): JSX.Element {
 
 
     return (
       <div className={styles.container}>
-        <button  className={styles.btn}>OK</button>
+        <button onClick={addHandler}  className={styles.btn}>Add</button>
       </div>
     );
   }

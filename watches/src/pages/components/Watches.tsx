@@ -1,12 +1,15 @@
-
+import Clocks from './Clocks'
 import Button from './Button';
-import styles from './watches.module.css'
+import styles from './watches.module.css';
+import { inputValue }  from './App';
 
 interface cardProps  {
+    cityOnChange: ()=> void
+    UTCOnChange: ()=> void
+    addOnClick: ()=>void
+    cityInput: inputValue
+    UTCInput: inputValue
 
-    title: string
-    description: string
-    btn_descr: string
     
   }
 
@@ -20,18 +23,15 @@ export default function Watches(props: cardProps): JSX.Element {
       <form className={styles.cont}>
       <label className={styles.container}>
           <p className={styles.description}>City</p>
-          <input  className={styles.input}></input>
+          <input onChange={props.cityOnChange} value={props.cityInput.value} className={styles.input}></input>
       </label>
       <label className={styles.container}>
           <p className={styles.description}>UTC</p>
-          <input   className={styles.input}></input>
+          <input onChange={props.UTCOnChange} value={props.UTCInput.value}  className={styles.input}></input>
       </label>
-      <Button />
+      <Button addHandler={props.addOnClick}/>
       <div className={styles.table_container}>
-          <div className={styles.description}>
-
-  
-          </div>
+         <Clocks></Clocks>
   
       </div>
   </form> 
