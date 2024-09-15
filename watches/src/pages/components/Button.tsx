@@ -1,7 +1,7 @@
 import styles from './button.module.css'
 
 
-export default function Button({addHandler}: ()=>void): JSX.Element {
+export default function Button({addHandler}: {addHandler: ()=>void} ): JSX.Element {
 
 
     return (

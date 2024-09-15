@@ -1,0 +1,19 @@
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+
+  
+}
+.note_cont {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.description {
+    width: 300px;
+    padding: 20px;
+} 
+
